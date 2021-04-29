@@ -16,6 +16,7 @@
     "sass": "^1.26.9"
   },
   "browserslist": [
-    "since 2017-06"
-  ]
+    "defaults"
+  ],
+  "dependencies": {}
 }
