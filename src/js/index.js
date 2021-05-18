@@ -2,6 +2,10 @@ import { DOMSelectors } from "./DOM";
 
 const key = "RGAPI-360739c5-1a96-46f6-b942-bcf95baa916c";
 
+//function fetch(key) {
+//return new Promise((resolve, reject) => {});
+//}
+//return data
 const query = async function () {
   try {
     const response = await fetch(

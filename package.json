@@ -6,14 +6,17 @@
   "scripts": {
     "clean": "rm dist/bundle.js",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build ./src/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.2.5",
     "parcel-bundler": "^1.12.4",
-    "sass": "^1.26.9"
+    "postcss": "^8.2.15",
+    "sass": "^1.26.9",
+    "tailwindcss": "^2.1.2"
   },
   "browserslist": [
     "last 3 and_chr versions",
@@ -22,5 +25,7 @@
     "last 3 ios_saf versions",
     "last 3 safari versions"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "postcss-import": "^14.0.2"
+  }
 }
