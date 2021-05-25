@@ -1,4 +1,4 @@
-
+@import "./search";
 
 $font-main: "Asap", sans-serif;
 $font-second: "Josefin Slab", serif;
@@ -13,13 +13,14 @@ body {
   font-weight: 500;
 }
 body {
-  background-color: pink;
+  background-color: black;
 }
 
 .header {
-  font-size: 5.2rem;
+  height: 15vh;
+  font-size: 3.2rem;
 
-  margin: 3rem auto;
+  margin: 3rem;
   text-align: center;
 }
 .top-rated {
@@ -32,19 +33,19 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   width: 90vw;
-  background-color: white;
+  background-color: papayawhip;
   margin: 1rem auto;
   padding: 3rem auto;
   align-items: center;
 }
-.movie-card {
+.champ-card {
   height: 65vh;
   width: 20vw;
   margin: 0 auto;
   position: relative;
   margin: 2rem auto;
 }
-.movie-card-front {
+.champ-card-front {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -59,7 +60,7 @@ body {
   width: 100%;
   height: 100%;
 }
-.movie-card-back {
+.champ-card-back {
   transition: all 0.3s;
   position: absolute;
   top: 0;
@@ -75,19 +76,19 @@ body {
   width: 100%;
   height: 100%;
 }
-.movie-card-header {
+.champ-card-header {
   font-size: 2.4rem;
   text-transform: uppercase;
   margin: 1rem auto;
 
   text-align: center;
 }
-.score-box,
-.release-box {
+.title-box,
+.about-box {
   text-align: center;
 }
 
-.movie-genres {
+.lrn-more {
   font-size: 1.6rem;
   padding: 1rem 2rem;
   display: flex;
@@ -99,17 +100,17 @@ body {
 .movie-genre {
   list-style: none;
 }
-.user-score {
+.title {
   font-size: 2rem;
 }
-.release-date {
+.ab {
   font-size: 2rem;
 }
 
-.movie-card:hover .movie-card-front {
+.champ-card:hover .champ-card-front {
   z-index: 1;
 }
-.movie-card:hover .movie-card-back {
+.champ-card:hover .champ-card-back {
   z-index: 3;
   display: flex;
 }

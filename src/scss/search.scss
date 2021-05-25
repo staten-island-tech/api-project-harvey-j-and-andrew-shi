@@ -1,0 +1,26 @@
+.srch-bar-container {
+  height: 5vh;
+  width: 100vw;
+}
+
+.srch-bar {
+  padding-left: 8rem;
+  border: 2px solid #ccc;
+  border-radius: 0.8rem;
+  position: fixed;
+  height: 6%;
+  margin: 1rem;
+  z-index: 100;
+  transition: width 2s;
+}
+
+.submit-btn {
+  position: fixed;
+  height: 6%;
+  margin: 1rem;
+  z-index: 100;
+}
+
+.srch-bar:focus {
+  width: 85%;
+}
