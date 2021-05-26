@@ -36,27 +36,3 @@
 .srch-bar:focus {
   width: 85%;
 }
-
-@media only screen and (max-width: 900px) {
-  html,
-  body,
-  * {
-    font-size: 90.5%;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  html,
-  body,
-  * {
-    font-size: 70.5%;
-  }
-}
-
-@media only screen and (max-width: 300px) {
-  html,
-  body,
-  * {
-    font-size: 52.5%;
-  }
-}

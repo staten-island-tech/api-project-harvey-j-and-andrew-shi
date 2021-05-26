@@ -8,7 +8,7 @@ const dspChamps = async function (cData) {
     Object.values(cData).forEach((champion) => {
       DOMSelectors.grid.insertAdjacentHTML(
         "beforeend",
-        `  <div class="champ-card">
+        `  <div tabindex="0" class="champ-card">
       <div class="champ-card-front">
         <img
           src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg"
