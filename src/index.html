@@ -12,9 +12,11 @@
   </head>
   <body>
     <div>
+      <button class="home-btn">Home</button>
     <form class="srch-bar-container" id="submit-btn">
       <input class="srch-bar" type="text" placeholder="Search..">
       <input class="submit-btn" type="submit">
+     
     </form>
     </div>
     <header class="header">
@@ -22,10 +24,32 @@
     <h2 class="">All of the Champions</h2>
   </header>
     <section class="movie-grid">
-     
+      <div class="champ-card">
+        <div class="champ-card-front">
+          <img
+            src=""
+            alt=""
+            class="poster"
+          />
+        </div>
+        <div class="champ-card-back">
+        <button class="champ-card-back-btn">
+          <h3 class="champ-card-header">${champion.id}</h3>
+          <div class="title-box">
+            <p class="title">${champion.title}</p>
+          </div>
+          <div class="about-box">
+            <p class="ab">about</p>
+            <p class="ab">${champion.blurb}</p>
+          </div>
+          <div class="lrn-more">
+  Click to learn more
+          </div>
+          </button>
+        </div>
+      </div>
     </section>
 
     <script src="js/index.js"></script>
-    <script src="js/search.js"></script>
   </body>
 </html>

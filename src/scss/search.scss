@@ -5,6 +5,7 @@
 
 .srch-bar {
   padding-left: 8rem;
+  font-size: 2rem;
   border: 2px solid #ccc;
   border-radius: 0.8rem;
   position: fixed;
@@ -15,7 +16,18 @@
 }
 
 .submit-btn {
+  font-size: 2rem;
   position: fixed;
+  height: 6%;
+  margin: 1rem;
+  z-index: 100;
+}
+
+.home-btn {
+  font-size: 2rem;
+  position: fixed;
+  width: 10%;
+  left: 88%;
   height: 6%;
   margin: 1rem;
   z-index: 100;
@@ -23,4 +35,28 @@
 
 .srch-bar:focus {
   width: 85%;
+}
+
+@media only screen and (max-width: 900px) {
+  html,
+  body,
+  * {
+    font-size: 90.5%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  html,
+  body,
+  * {
+    font-size: 70.5%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  html,
+  body,
+  * {
+    font-size: 52.5%;
+  }
 }
