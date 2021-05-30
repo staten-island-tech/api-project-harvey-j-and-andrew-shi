@@ -24,7 +24,10 @@
 }
 
 .home-btn {
-  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
   position: fixed;
   width: 10%;
   left: 88%;
@@ -35,4 +38,18 @@
 
 .srch-bar:focus {
   width: 85%;
+}
+
+@media only screen and (max-width: 450px) {
+  .home-btn {
+    left: 85%;
+  }
+
+  .srch-bar {
+    padding-left: 9rem;
+  }
+
+  .srch-bar:focus {
+    width: 80%;
+  }
 }

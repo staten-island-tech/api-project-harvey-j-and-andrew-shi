@@ -2,6 +2,18 @@ import { DOMSelectors } from "./DOM";
 
 const key = "RGAPI-360739c5-1a96-46f6-b942-bcf95baa916c";
 
+//captize word
+const capitalizeWord = async function (word) {
+  try {
+    const lower = word.toLowerCase();
+    const finallWord = word.charAt(0).toUpperCase() + lower.slice(1);
+    return finallWord;
+  } catch (error) {
+    console.log(error);
+    alert("err capitalizeWord fun not working");
+  }
+};
+//funtion to display the chapion
 const dspChamps = async function (cData) {
   try {
     DOMSelectors.grid.innerHTML = "";
@@ -34,10 +46,11 @@ Click to learn more
     });
   } catch (error) {
     console.log(error);
-    alert("err dsp champ not working");
+    alert("err dsp champ fun not working");
   }
 };
 
+//display all champions with the api key
 const query = async function () {
   try {
     const response = await fetch(
@@ -51,25 +64,32 @@ const query = async function () {
   }
 };
 
-const listen = function () {
-  DOMSelectors.searchForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const searchParams = DOMSelectors.searchArea.value;
-    const searchQuery = async function () {
-      try {
-        const champResponse = await fetch(
-          `http://ddragon.leagueoflegends.com/cdn/11.9.1/data/en_US/champion/${searchParams}.json?api_key=${key}`
-        );
-        const champInfo = await champResponse.json();
-        DOMSelectors.grid.innerHTML = "";
-        dspChamps(champInfo.data);
-      } catch (error) {
-        console.log(error);
-        alert("err invaild champion");
-      }
-    };
-    searchQuery();
-  });
+// search for champ
+const searchForm = async function () {
+  try {
+    DOMSelectors.searchForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const searchParams = DOMSelectors.searchArea.value;
+
+      const searchQuery = async function () {
+        try {
+          const champName = await capitalizeWord(searchParams);
+          const champResponse = await fetch(
+            `http://ddragon.leagueoflegends.com/cdn/11.9.1/data/en_US/champion/${champName}.json?api_key=${key}`
+          );
+          const champInfo = await champResponse.json();
+          dspChamps(champInfo.data);
+        } catch (error) {
+          console.log(error);
+          alert("err invaild champion");
+        }
+      };
+      searchQuery();
+    });
+  } catch (error) {
+    console.log(error);
+    alert("err searchForm fun not working");
+  }
 };
 
 const home = async function () {
@@ -85,5 +105,5 @@ const home = async function () {
 };
 
 query();
+searchForm();
 home();
-listen();

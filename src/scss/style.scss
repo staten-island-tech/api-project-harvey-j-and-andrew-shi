@@ -54,7 +54,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  /* background-image: url("https://image.tmdb.org/t/p/w300/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg"); */
+
   background-position: center;
   z-index: 3;
   transition: all 0.3s;
@@ -129,36 +129,17 @@ body {
 
 @media only screen and (max-width: 900px) {
   html,
-  body,
-  * {
-    font-size: 90.5%;
+  body {
+    font-size: 60%;
   }
-  .lrn-more {
-    font-size: 1rem;
-  }
-  .champ-card-header {
-    font-size: 0.9rem;
-  }
-  .title {
-    font-size: 0.8rem;
-  }
-  .ab {
-    font-size: 0.9rem;
+  .champ-card {
+    width: 40vw;
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   html,
-  body,
-  * {
-    font-size: 70.5%;
-  }
-}
-
-@media only screen and (max-width: 300px) {
-  html,
-  body,
-  * {
-    font-size: 52.5%;
+  body {
+    font-size: 40%;
   }
 }
