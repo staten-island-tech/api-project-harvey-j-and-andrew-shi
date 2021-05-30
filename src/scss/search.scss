@@ -6,19 +6,20 @@
 .srch-bar {
   padding-left: 8rem;
   font-size: 2rem;
+  width: 20%;
   border: 2px solid #ccc;
   border-radius: 0.8rem;
   position: fixed;
   height: 6%;
   margin: 1rem;
   z-index: 100;
-  transition: width 2s;
+  transition: width .8s;
 }
 
 .submit-btn {
   font-size: 2rem;
   position: fixed;
-  height: 6%;
+  height: 6.6%;
   margin: 1rem;
   z-index: 100;
 }
@@ -37,7 +38,7 @@
 }
 
 .srch-bar:focus {
-  width: 85%;
+  width: 70%;
 }
 
 @media only screen and (max-width: 450px) {
@@ -50,6 +51,6 @@
   }
 
   .srch-bar:focus {
-    width: 80%;
+    width: 60%;
   }
 }
